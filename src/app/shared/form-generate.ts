@@ -19,6 +19,5 @@ export const generateForm = (fields) => {
         
         group[field] = [f.defaultValue || '', validations];  
     }); 
-console.log(`group`, group)
     return group
 }

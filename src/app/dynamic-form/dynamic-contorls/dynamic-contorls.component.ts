@@ -13,7 +13,6 @@ export class DynamicContorlsComponent implements OnInit, AfterViewInit {
 
   constructor() { }
   ngAfterViewInit(): void {
-
   }
 
   get fieldObj(){

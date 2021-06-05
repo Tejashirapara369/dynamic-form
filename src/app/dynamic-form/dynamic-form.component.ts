@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as formService from '../shared/fields';
 import { generateForm } from '../shared/form-generate';
 
@@ -16,7 +16,13 @@ export class DynamicFormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.formGroup = this.fb.group(generateForm(this.form))
+    var fieldArray = generateForm(this.form)
+    // fieldArray['hobbies'] = this.fb.array([])
+    this.formGroup = this.fb.group(fieldArray)
+  }
+
+  get hobbyArray() {
+    return (this.formGroup.get('hobbies') as FormArray).controls;
   }
 
 }

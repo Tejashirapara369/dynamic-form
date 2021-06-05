@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { DynamicContorlsComponent } from './dynamic-form/dynamic-contorls/dynamic-contorls.component';
 import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { SigninComponent } from './signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
     UnlessDirective,
     PopupComponent,
     DynamicFormComponent,
-    DynamicContorlsComponent
+    DynamicContorlsComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ const template_ref = {
         label: 'Name',
         controlType: 'text',
         placeholder: 'Enter your name',
+        autofillOff: true, 
         required: true
     },
     mobile: {
@@ -12,6 +13,7 @@ const template_ref = {
         controlType: 'text',
         placeholder: '+91 XXXXXXXXXX',
         required: true,
+        autofillOff: true, 
         pattern: /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/g
     },
     email: {
@@ -23,7 +25,7 @@ const template_ref = {
     },
     gender: {
         label: 'Gender',
-        controlType: 'select',
+        controlType: 'radio',
         defaultValue: 'Male',
         options: ['Male', 'Female']
     },
@@ -35,10 +37,15 @@ const template_ref = {
         required: true
     },
     password: {
-        lalel: 'Password',
-        controlType: 'text',
+        label:'Password',
+        controlType: 'password',
         required: true
-    }
+    },
+    address: {
+        controlType: 'textarea',
+        required: true,
+        label: 'Current Address',
+    },
 }
 
 const segment = {
@@ -48,8 +55,12 @@ const segment = {
             'mobile',
             'gender',
             'email',
-            'dateTimePicker'
+            'dateTimePicker',
+            'address'
         ]
+    },
+    signInForm: {
+        fields: ['email', 'password']
     }
 }
 
