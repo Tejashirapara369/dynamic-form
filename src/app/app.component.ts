@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     })
 
     this.userForm.statusChanges.subscribe((value) => {
-      console.log(`value`, value)
+      // console.log(`value`, value)
     })
 
     // this.userForm.patchValue({
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit() {
-    console.log(`this.userForm`, this.userForm)
+    // console.log(`this.userForm`, this.userForm)
   }
 
   addNewTask() {

@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.fb.group(generateForm(this.form))
-    console.log(`this.formGroup`, this.formGroup)
+    // console.log(`this.formGroup`, this.formGroup)
   }
 
 }
